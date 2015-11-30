@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12pt;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 0.3em 0.3em;
+}
+
+tr.odd {
+    background-color: #e7e3ff;
+}
+
+.form span.required {
+    color: red;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form select {
+    font-size: 12pt;
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 0.2em;
+}
+
+.form .error input[type="text"],
+.form .error input[type="password"] {
+    border-color: red;
+}
+
+.form .error-msg {
+    max-width: 34.1em;
+    text-align: center;
+    font-size: 10pt;
+    border: 2px solid red;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: lightpink;
+}
+
+.form input[type="submit"],
+.form input[type="reset"] {
+    font-size: 10pt;
+    padding: 0.3em 1em;
+    color: white;
+    background-color: #6f5499;
+    border: 1px solid gray;
+    border-radius: 3px;
+    transition: background-color 0.5s ease;
+}
+
+.form input[type="submit"]:hover,
+.form input[type="reset"]:hover {
+    background-color: #9a79d8;
+    transition: background-color 0.5s ease;
+}
