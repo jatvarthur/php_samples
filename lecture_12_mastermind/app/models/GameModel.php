@@ -85,8 +85,10 @@ class GameModel
 		// считаем количество коров - совпадение без позиции в тайном числе
 		$cows = 0;
 		for ($i = 0; $i < self::COUNT_CODE_CHARS; ++$i) {
-			if (strpos($this->code, $guess[$i]) !== false)
-				$cows += 1;
+			for ($j = 0; $j < self::COUNT_CODE_CHARS; ++$j) {
+				if ($guess[$i] == $this->code[$j] && $i != $j)
+					$cows += 1;
+			}
 		}
 
 		return $this->result($guess, GuessResult::GUESS, $bulls, $cows);
