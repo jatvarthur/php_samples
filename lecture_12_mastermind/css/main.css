@@ -1,0 +1,77 @@
+div.wrapper {
+    text-align: center;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    line-height: 16pt;
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+p {
+    text-align: left;
+}
+
+.guess-form {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 1.2em 2em;
+    display: inline-block;
+    text-align: left;
+    min-width: 400px;
+}
+
+.guess-form .row {
+    padding: 12px 0;
+}
+
+.guess-form label {
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.guess-form input[type="text"] {
+    font-size: 16pt;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.guess-form .error input[type="text"] {
+    border-color: red;
+}
+
+.guess-form .error-msg {
+    max-width: 34.1em;
+    text-align: center;
+    font-size: 10pt;
+    border: 2px solid red;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: lightpink;
+}
+
+.guess-form input[type="button"],
+.guess-form input[type="submit"],
+.guess-form input[type="reset"] {
+    font-size: 14pt;
+    padding: 0.3em 1em;
+    color: white;
+    background-color: #2576ff;
+    border: 1px solid gray;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.guess-form input[type="button"]:hover,
+.guess-form input[type="submit"]:hover,
+.guess-form input[type="reset"]:hover {
+    background-color: #49abff;
+    transition: all 0.5s ease;
+}
+
+.guess-form .footer {
+    text-align: center;
+}
