@@ -18,7 +18,7 @@
 				<input type="text" name="guess" id="guessVal" maxlength="<?= GameModel::COUNT_CODE_CHARS ?>" value="">
 			</div>
 			<div class="row footer">
-				<input type="button" name="submitGuess" id="submitGuess" value="Угадать"/>
+				<input type="submit" name="submitGuess" id="submitGuess" value="Угадать"/>
 			</div>
 		</form>
 		<div class="output" id="output"></div>

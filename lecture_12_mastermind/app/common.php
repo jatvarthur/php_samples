@@ -71,6 +71,14 @@ function redirect($url = './')
 }
 
 /**
+ * Отсылает клиенту код ошибки HTTP
+ */
+function set_http_error($code)
+{
+	header('X-PHP-Response-Code: '.$code, true, $code);
+}
+
+/**
  * Определяет контроллер и метод, в которы необходимо передать запрос
  */
 function get_route_url()
@@ -108,12 +116,18 @@ function route_request()
 	$controllerClass = ucfirst($route['module']).'Controller';
 	$actionName = 'action'.(strlen($route['action']) > 0 ? ucfirst($route['action']) : 'Index');
 
-	$controller = new $controllerClass();
-	if (method_exists($controller, $actionName)) {
-		call_user_func(array($controller, $actionName));
-	} else {
-		redirect();
+	if (!class_exists($controllerClass)) {
+		set_http_error(404);
+		return;
 	}
+
+	$controller = new $controllerClass();
+	if (!method_exists($controller, $actionName)) {
+		set_http_error(404);
+		return;
+	}
+
+	call_user_func(array($controller, $actionName));
 }
 
 /**
